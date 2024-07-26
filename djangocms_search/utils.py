@@ -1,7 +1,5 @@
 from django.db import models
 from django.utils.html import strip_tags as _strip_tags
-
-from lxml.etree import ParseError, ParserError
 from nh3 import clean
 
 
@@ -28,9 +26,9 @@ def get_field_value(obj, name):
 
 def strip_tags(value):
     """
-    This method removes any dangerous tag using
-    bindings for the Rust-based ammonia crate through nh3, then removes
-    allowlisted tags as well in a second round.
+    Sanitize the potentially dangerous HTML using the Rust ammonia crate
+    (through nh3 Python bindings) and strip any excess tags as well.
+    This gives us the basic text content to use in the index and preview.
     """
 
     if isinstance(value, str):

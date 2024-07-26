@@ -1,5 +1,4 @@
 from django.conf import settings
-from django.utils import translation
 from django.views.generic import ListView
 from django.views.generic.edit import FormMixin
 
@@ -15,7 +14,7 @@ class SearchView(FormMixin, ListView):
 
     form_class = ModelSearchForm
 
-    paginate_by = settings.DJANGOCMS_SEARCH_PAGINATION
+    paginate_by = getattr(settings, "DJANGOCMS_SEARCH_PAGINATION", 10)
     paginator_class = Paginator
 
     template_name = "djangocms_search/search.html"
