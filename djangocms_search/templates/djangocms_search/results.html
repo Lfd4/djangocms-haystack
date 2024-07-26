@@ -1,0 +1,18 @@
+{% load i18n highlight %}
+
+<div class="search-result">
+	<ul class="search-result__list">
+		{% for result in page_obj.object_list %}
+		<li class="search-result__item">
+			<a href="{{ result.url }}" class="search-result__link">
+				<h3 class="search-result__header">{{ result.title }}</h3>
+				{% if result.text %}
+				<p>{% highlight result.text with request.GET.q css_class 'search-result__highlight' %}</p>
+				{% endif %}
+			</a>
+		</li>
+		{% empty %}
+		<li>{% trans "No results found for" %} "{{ request.GET.q }}"</li>
+		{% endfor %}
+	</ul>
+</div>

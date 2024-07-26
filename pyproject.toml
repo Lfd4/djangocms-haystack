@@ -1,0 +1,13 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "djangocms-search"
+version = "1.0.0rc1"
+requires-python = ">=3.9"
+dependencies = [
+	"nh3",
+	"whoosh",
+	"django-haystack"
+]

@@ -1,0 +1,13 @@
+{% load i18n %}
+
+<form action="." method="get" class="search-form">
+	<div class="search-form__field">
+		<label class="search-form__label" for="search-query">{% translate "Search term" %}</label>
+		<input name="q" id="search-query" class="search-form__input" placeholder="{% translate 'Enter a search term…' %}"
+			value="{{ form.q.value|default:'' }}">
+	</div>
+
+	<div class="search-form__field">
+		<input type="submit" class="search-form__input search-form__input--submit" value="{% translate 'Search' %}">
+	</div>
+</form>

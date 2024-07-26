@@ -1,0 +1,14 @@
+{% extends "djangocms_search/base.html" %}
+{% load i18n %}
+
+{% block form %}
+{% include "djangocms_search/form.html" %}
+{% endblock %}
+
+{% block results %}
+{% include "djangocms_search/results.html" %}
+{% endblock %}
+
+{% block pagination %}
+{% include "djangocms_search/pagination.html" %}
+{% endblock %}

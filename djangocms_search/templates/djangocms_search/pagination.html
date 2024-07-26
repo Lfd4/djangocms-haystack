@@ -1,0 +1,19 @@
+{% load i18n %}
+
+{% if page_obj.has_other_pages %}
+<div class="search-pagination">
+	{% if page_obj.has_previous %}
+	<a class="search-pagination__button search-pagination__button--previous"
+		href="?q={{ query }}&page={{ page_obj.number|add:-1 }}">
+		{% translate "Previous page" %}
+	</a>
+	{% endif %}
+
+	{% if page_obj.has_next %}
+	<a class="search-pagination__button search-pagination__button--next"
+		href="?q={{ query }}&page={{ page_obj.number|add:1 }}">
+		{% translate "Next page" %}
+	</a>
+	{% endif %}
+</div>
+{% endif %}
