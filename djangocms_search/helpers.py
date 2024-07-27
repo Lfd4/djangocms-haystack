@@ -1,15 +1,15 @@
+from typing import Optional
+
 from cms.models import CMSPlugin
 from cms.plugin_rendering import ContentRenderer
-from typing import Optional
+from cms.toolbar.toolbar import CMSToolbar
 from django.conf import settings
-from django.core.handlers.wsgi import WSGIRequest
 from django.contrib.auth.models import AnonymousUser
+from django.core.handlers.wsgi import WSGIRequest
 from django.template import Engine, RequestContext
 from django.test import RequestFactory
 from django.utils import translation
 from django.utils.text import smart_split
-
-from cms.toolbar.toolbar import CMSToolbar
 
 from djangocms_search.utils import (
     get_field_value,

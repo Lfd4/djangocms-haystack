@@ -1,11 +1,13 @@
 from typing import Optional
+
 from cms.models import CMSPlugin, Placeholder
 from django.conf import settings
-from django.db import models
 from django.core.handlers.wsgi import WSGIRequest
+from django.db import models
 from django.utils import translation
 from haystack import indexes
-from djangocms_search.helpers import get_request, get_plugin_index_data
+
+from djangocms_search.helpers import get_plugin_index_data, get_request
 
 
 class DjangoCMSSearchIndexBase(indexes.SearchIndex):

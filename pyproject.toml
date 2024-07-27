@@ -11,3 +11,18 @@ dependencies = [
 	"whoosh",
 	"django-haystack"
 ]
+
+# Linter settings
+[tool.ruff]
+line-length = 80
+
+[tool.ruff.lint]
+extend-select = ["Q", "I"]
+
+[tool.ruff.lint.flake8-quotes]
+docstring-quotes = "double"
+inline-quotes = "double"
+
+# Formatter settings
+[tool.ruff.format]
+quote-style = "double"

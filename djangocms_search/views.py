@@ -1,8 +1,7 @@
 from django.conf import settings
+from django.core.paginator import Paginator
 from django.views.generic import ListView
 from django.views.generic.edit import FormMixin
-
-from django.core.paginator import Paginator
 from haystack.forms import ModelSearchForm
 from haystack.query import SearchQuerySet
 
