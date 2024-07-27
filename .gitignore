@@ -3,3 +3,4 @@
 .nox
 .pytest_cache
 .ruff-cache
+dist/*
