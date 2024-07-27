@@ -1,2 +1,5 @@
 *.egg-info
 **.pyc
+.nox
+.pytest_cache
+.ruff-cache
