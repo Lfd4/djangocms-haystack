@@ -26,7 +26,7 @@ jobs:
       - name: Install project dependencies
         run: poetry install
       - name: Run nox
-        run: nox
+        run: poetry run nox
   release-please:
     runs-on: ubuntu-latest
     steps:
