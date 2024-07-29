@@ -5,16 +5,16 @@ from cms.plugin_rendering import ContentRenderer
 from cms.toolbar.toolbar import CMSToolbar
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
+from django.core.exceptions import FieldDoesNotExist
 from django.core.handlers.wsgi import WSGIRequest
 from django.template import Engine, RequestContext
 from django.test import RequestFactory
 from django.utils import translation
 from django.utils.text import smart_split
+from django.db import models
 
-from djangocms_search.utils import (
-    get_field_value,
-    strip_tags,
-)
+from django.utils.html import strip_tags as _strip_tags
+from nh3 import clean
 
 
 def get_sanitized_text(data):
@@ -22,16 +22,61 @@ def get_sanitized_text(data):
     return smart_split(stripped)
 
 
+def get_field_value(obj, path: str):
+    # we have to support the Django-like dunder syntax
+    # since many cms extensions depend on this in their
+    # search_fields definitions.
+    fields = path.split("__")
+    current_field = fields[0]
+
+    value = getattr(obj, current_field, None) or ""
+
+    if len(fields) > 1:
+        # join the list to dunder string again
+        remaining_fields = "__".join(fields[1:])
+        return get_field_value(value, remaining_fields)
+
+    return value
+
+
+def strip_tags(value):
+    """
+    Sanitize the potentially dangerous HTML using the Rust ammonia crate
+    (through nh3 Python bindings) and strip any excess tags as well.
+    This gives us the basic text content to use in the index and preview.
+    """
+
+    if isinstance(value, str):
+        # remove whitespace
+        value = value.strip()
+
+        # remove potentially dangerous content
+        partial_strip = clean(value)
+
+        # remove other html tags using native Django util
+        value = _strip_tags(partial_strip)
+        return value.strip()
+    return value
+
+
 def get_plugin_index_data(base_plugin: CMSPlugin, request: WSGIRequest):
+    """
+    This function is partially inspired from aldryn-search and was just cleaned
+    up a bit.
+
+    It needs to stay like this for now because other well-known
+    extensions in the broader cms ecosystem expect to be able to set
+    their own search fields.
+
+    One of those extensions is djangocms-file.
+    """
     rendered_plugin_content = []
     instance, plugin_type = base_plugin.get_plugin_instance()
 
     if instance is None:
         return rendered_plugin_content
 
-    # Many django CMS extensions (and the CMS itself)
-    # set their search_fields explicitly like this,
-    # so this needs to stay included to ensure compatibility.
+    # get potentially defined static search fields from model
     search_fields = getattr(instance, "search_fields", [])
 
     if hasattr(instance, "search_fulltext"):
