@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.0](https://github.com/Lfd4/djangocms-search/compare/v0.1.4...v0.2.0) (2024-07-29)
+
+
+### Features
+
+* switch to pypi ([dee6803](https://github.com/Lfd4/djangocms-search/commit/dee6803fe6e0d7f105ecfabe7a0056fc1606fd0c))
+
 ## [0.1.4](https://github.com/Lfd4/djangocms-search/compare/v0.1.3...v0.1.4) (2024-07-29)
 
 
