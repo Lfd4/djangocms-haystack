@@ -2,7 +2,7 @@ from cms.models import PageContent
 from django.db.models import Q
 from haystack import indexes
 
-from djangocms_search.base import DjangoCMSSearchIndexBase
+from djangocms_haystack.base import DjangoCMSSearchIndexBase
 
 
 class PageContentIndex(DjangoCMSSearchIndexBase, indexes.Indexable):

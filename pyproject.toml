@@ -3,12 +3,12 @@ requires = ["poetry-core"]
 build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
-name = "djangocms-search"
+name = "djangocms-haystack"
 version = "0.2.0"
 description = "aldryn-search inspired Haystack index for djangoCMS projects"
 authors = ["Filip Weidemann <filip.weidemann@lfda.de>"]
 readme = "README.md"
-packages = [{include = "djangocms_search"}]
+packages = [{include = "djangocms_haystack"}]
 
 [tool.poetry.dependencies]
 python = ">=3.9"

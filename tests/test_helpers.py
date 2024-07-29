@@ -1,4 +1,4 @@
-from djangocms_search.helpers import get_field_value
+from djangocms_haystack.helpers import get_field_value
 
 
 class TestHelpers:

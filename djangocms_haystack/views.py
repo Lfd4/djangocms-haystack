@@ -5,7 +5,7 @@ from django.views.generic.edit import FormMixin
 from haystack.forms import ModelSearchForm
 from haystack.query import SearchQuerySet
 
-from djangocms_search.helpers import get_haystack_connection_from_request
+from djangocms_haystack.helpers import get_haystack_connection_from_request
 
 
 class SearchView(FormMixin, ListView):
@@ -13,10 +13,10 @@ class SearchView(FormMixin, ListView):
 
     form_class = ModelSearchForm
 
-    paginate_by = getattr(settings, "DJANGOCMS_SEARCH_PAGINATION", 10)
+    paginate_by = getattr(settings, "djangocms_haystack_PAGINATION", 10)
     paginator_class = Paginator
 
-    template_name = "djangocms_search/search.html"
+    template_name = "djangocms_haystack/search.html"
 
     def get_form_kwargs(self):
         kwargs = super().get_form_kwargs()

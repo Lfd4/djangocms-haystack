@@ -7,7 +7,7 @@ from django.db import models
 from django.utils import translation
 from haystack import indexes
 
-from djangocms_search.helpers import get_plugin_index_data, get_request
+from djangocms_haystack.helpers import get_plugin_index_data, get_request
 
 
 class DjangoCMSSearchIndexBase(indexes.SearchIndex):

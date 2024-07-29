@@ -1,0 +1,14 @@
+{% extends "djangocms_haystack/base.html" %}
+{% load i18n %}
+
+{% block form %}
+{% include "djangocms_haystack/form.html" %}
+{% endblock %}
+
+{% block results %}
+{% include "djangocms_haystack/results.html" %}
+{% endblock %}
+
+{% block pagination %}
+{% include "djangocms_haystack/pagination.html" %}
+{% endblock %}

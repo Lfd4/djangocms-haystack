@@ -25,7 +25,7 @@ HELPER_SETTINGS = {
         "django.contrib.staticfiles",
         "django.contrib.sites",
         "haystack",
-        "djangocms_search",
+        "djangocms_haystack",
         "cms",
         "menus",
         "sekizai",
