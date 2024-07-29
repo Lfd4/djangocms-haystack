@@ -21,9 +21,9 @@ jobs:
       - name: Run poetry build
         run: poetry build
       - name: Setup remote PyPI repository
-        run: poetry config repositories.testpypi https://test.pypi.org/legacy/
+        run: poetry config repositories.pypi https://pypi.org/legacy/
       - name: Setup remote PyPI token authentication
-        run: poetry config pypi-token.testpypi ${{ secrets.PYPI_TOKEN }}
+        run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
       - name: Publish package
-        run: poetry publish --repository testpypi
+        run: poetry publish --repository pypi
 
