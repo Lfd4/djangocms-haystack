@@ -10,20 +10,24 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - name: Set up Python 3.11
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
+
       - name: Install poetry
         run: pip install poetry
+
       - name: Run poetry install
         run: poetry install
+
       - name: Run poetry build
         run: poetry build
-      - name: Setup remote PyPI repository
-        run: poetry config repositories.pypi https://pypi.org/legacy/
+
       - name: Setup remote PyPI token authentication
         run: poetry config pypi-token.pypi ${{ secrets.PYPI_TOKEN }}
+
       - name: Publish package
-        run: poetry publish --repository pypi
+        run: poetry publish
 
