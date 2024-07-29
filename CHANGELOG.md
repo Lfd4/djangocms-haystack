@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.2](https://github.com/Lfd4/djangocms-haystack/compare/v0.2.1...v0.2.2) (2024-07-29)
+
+
+### Bug Fixes
+
+* rename project to djangocms-haystack ([42d65aa](https://github.com/Lfd4/djangocms-haystack/commit/42d65aa1de8466ed43e5058b172b8841ced01919))
+
 ## [0.2.1](https://github.com/Lfd4/djangocms-search/compare/v0.2.0...v0.2.1) (2024-07-29)
 
 
