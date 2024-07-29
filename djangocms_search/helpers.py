@@ -5,15 +5,12 @@ from cms.plugin_rendering import ContentRenderer
 from cms.toolbar.toolbar import CMSToolbar
 from django.conf import settings
 from django.contrib.auth.models import AnonymousUser
-from django.core.exceptions import FieldDoesNotExist
 from django.core.handlers.wsgi import WSGIRequest
 from django.template import Engine, RequestContext
 from django.test import RequestFactory
 from django.utils import translation
-from django.utils.text import smart_split
-from django.db import models
-
 from django.utils.html import strip_tags as _strip_tags
+from django.utils.text import smart_split
 from nh3 import clean
 
 

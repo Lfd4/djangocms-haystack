@@ -1,4 +1,5 @@
 from django.conf import settings
+
 from .settings import SETTINGS as DEFAULT_SETTINGS
 
 
