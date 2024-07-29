@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.3](https://github.com/Lfd4/djangocms-search/compare/v0.1.2...v0.1.3) (2024-07-29)
+
+
+### Bug Fixes
+
+* use custom PAT to allow running release pipeline ([6f77e9b](https://github.com/Lfd4/djangocms-search/commit/6f77e9b49914999efc0de2c26b77c518f013ed12))
+
 ## [0.1.2](https://github.com/Lfd4/djangocms-search/compare/v0.1.1...v0.1.2) (2024-07-29)
 
 

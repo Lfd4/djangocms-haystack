@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "djangocms-search"
-version = "0.1.2"
+version = "0.1.3"
 description = "aldryn-search inspired Haystack index for djangoCMS projects"
 authors = ["Filip Weidemann <filip.weidemann@lfda.de>"]
 readme = "README.md"
