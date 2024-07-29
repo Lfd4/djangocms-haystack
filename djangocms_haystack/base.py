@@ -90,9 +90,10 @@ class DjangoCMSSearchIndexBase(indexes.SearchIndex):
     def get_placeholders(
         self, instance: models.Model, *args: list, **kwargs: dict
     ) -> models.QuerySet[Placeholder]:
-        if instance.placeholders:
-            return instance.placeholders.filter(*args, **kwargs)
-        return []
+        content_type = ContentType.objects.get_for_model(instance)
+        return Placeholder.objects.filter(
+                object_id=instance.pk, content_type=content_type
+            )
 
     def get_search_data(
         self, instance: models.Model, language: str, request: WSGIRequest
