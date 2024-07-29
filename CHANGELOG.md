@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.1.4](https://github.com/Lfd4/djangocms-search/compare/v0.1.3...v0.1.4) (2024-07-29)
+
+
+### Bug Fixes
+
+* use testpypi index for publishing ([ee325dd](https://github.com/Lfd4/djangocms-search/commit/ee325dd114886c8b2dc7532beb774b52747c1e9e))
+
 ## [0.1.3](https://github.com/Lfd4/djangocms-search/compare/v0.1.2...v0.1.3) (2024-07-29)
 
 
