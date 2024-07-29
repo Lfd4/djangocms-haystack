@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.3.0](https://github.com/Lfd4/djangocms-haystack/compare/v0.2.2...v0.3.0) (2024-07-29)
+
+
+### Features
+
+* add reverse name for search view ([902057d](https://github.com/Lfd4/djangocms-haystack/commit/902057d58cc066e81da4a6b42fc44557a4a7c1e9))
+
 ## [0.2.2](https://github.com/Lfd4/djangocms-haystack/compare/v0.2.1...v0.2.2) (2024-07-29)
 
 
