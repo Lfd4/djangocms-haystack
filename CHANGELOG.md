@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.2.1](https://github.com/Lfd4/djangocms-search/compare/v0.2.0...v0.2.1) (2024-07-29)
+
+
+### Bug Fixes
+
+* poetry publish action ([4cfb334](https://github.com/Lfd4/djangocms-search/commit/4cfb334255ddfdbdff48240ddbc556eeb05db3bc))
+
 ## [0.2.0](https://github.com/Lfd4/djangocms-search/compare/v0.1.4...v0.2.0) (2024-07-29)
 
 
