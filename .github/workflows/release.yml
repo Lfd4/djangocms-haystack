@@ -25,5 +25,5 @@ jobs:
       - name: Setup remote PyPI token authentication
         run: poetry config pypi-token.testpypi ${{ secrets.PYPI_TOKEN }}
       - name: Publish package
-        run: poetry publish
+        run: poetry publish --repository testpypi
 
