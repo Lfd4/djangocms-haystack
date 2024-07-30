@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.3.1](https://github.com/Lfd4/djangocms-haystack/compare/v0.3.0...v0.3.1) (2024-07-30)
+
+
+### Bug Fixes
+
+* import ContentType ([fb82edc](https://github.com/Lfd4/djangocms-haystack/commit/fb82edc5ef4b2aa17c0511d79c111c7180963837))
+* import order ([b75cfd5](https://github.com/Lfd4/djangocms-haystack/commit/b75cfd5c0733a800fff01dc7a2f5e8495188b676))
+
 ## [0.3.0](https://github.com/Lfd4/djangocms-haystack/compare/v0.2.2...v0.3.0) (2024-07-29)
 
 
