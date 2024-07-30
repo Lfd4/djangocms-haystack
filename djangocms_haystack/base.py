@@ -1,8 +1,8 @@
 from typing import Optional
 
 from cms.models import CMSPlugin, Placeholder
-from django.contrib.contenttypes.models import ContentType
 from django.conf import settings
+from django.contrib.contenttypes.models import ContentType
 from django.core.handlers.wsgi import WSGIRequest
 from django.db import models
 from django.utils import translation
