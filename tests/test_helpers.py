@@ -1,9 +1,9 @@
-from cms.api import add_plugin, create_page
-from cms.models import CMSPlugin, Page, PageContent
+from cms.models import CMSPlugin
 from cms.models.placeholdermodel import Placeholder
 from cms.plugin_base import CMSPluginBase
 from cms.plugin_pool import plugin_pool
 from django.contrib.auth.models import AnonymousUser
+
 from djangocms_haystack.helpers import (
     get_field_value,
     get_haystack_connection_from_request,
