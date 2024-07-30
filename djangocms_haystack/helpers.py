@@ -107,14 +107,16 @@ def get_plugin_index_data(base_plugin: CMSPlugin, request: WSGIRequest):
     else:
         values = (get_field_value(instance, field) for field in search_fields)
         for value in values:
-            cleaned_bits = get_sanitized_text(value or "")
-            rendered_plugin_content.extend(cleaned_bits)
+            sanitized_text = get_sanitized_text(value or "")
+            rendered_plugin_content.extend(sanitized_text)
     return rendered_plugin_content
 
 
 def get_request(language: Optional[str] = None) -> WSGIRequest:
     """Fake WSGIRequest for cms plugin rendering"""
-    request = RequestFactory(HTTP_HOST=settings.ALLOWED_HOSTS[0]).get("/")
+    request = RequestFactory(HTTP_HOST=settings.ALLOWED_HOSTS[0]).get(
+        f"/{language}"
+    )
     request.LANGUAGE_CODE = language
     request.user = AnonymousUser()
 

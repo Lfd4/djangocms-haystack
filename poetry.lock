@@ -82,6 +82,21 @@ files = [
 ]
 
 [[package]]
+name = "dj-database-url"
+version = "2.2.0"
+description = "Use Database URLs in your Django Application."
+optional = false
+python-versions = "*"
+files = [
+    {file = "dj_database_url-2.2.0-py3-none-any.whl", hash = "sha256:3e792567b0aa9a4884860af05fe2aa4968071ad351e033b6db632f97ac6db9de"},
+    {file = "dj_database_url-2.2.0.tar.gz", hash = "sha256:9f9b05058ddf888f1e6f840048b8d705ff9395e3b52a07165daa3d8b9360551b"},
+]
+
+[package.dependencies]
+Django = ">=3.2"
+typing_extensions = ">=3.10.0.0"
+
+[[package]]
 name = "django"
 version = "4.2.14"
 description = "A high-level Python web framework that encourages rapid development and clean, pragmatic design."
@@ -100,6 +115,28 @@ tzdata = {version = "*", markers = "sys_platform == \"win32\""}
 [package.extras]
 argon2 = ["argon2-cffi (>=19.1.0)"]
 bcrypt = ["bcrypt"]
+
+[[package]]
+name = "django-app-helper"
+version = "3.3.4"
+description = "Helper for django applications development"
+optional = false
+python-versions = ">=3.7"
+files = [
+    {file = "django-app-helper-3.3.4.tar.gz", hash = "sha256:ee4a8852227d0cf5586a85948dfb6d82b72a8846b9e3cb2f77a25e1360ad38ae"},
+    {file = "django_app_helper-3.3.4-py2.py3-none-any.whl", hash = "sha256:8bb50de46ebdb84082be01166a8d5f321f28da61c9c824a60aee1a4f736a64f9"},
+]
+
+[package.dependencies]
+dj-database-url = "*"
+docopt = "*"
+setuptools = {version = "*", markers = "python_version >= \"3.12\""}
+six = "*"
+
+[package.extras]
+async = ["channels", "daphne"]
+cms = ["django-cms (>=3.7,<3.12)"]
+docs = ["sphinx-rtd-theme"]
 
 [[package]]
 name = "django-classy-tags"
@@ -214,6 +251,16 @@ files = [
 
 [package.dependencies]
 Django = "*"
+
+[[package]]
+name = "docopt"
+version = "0.6.2"
+description = "Pythonic argument parser, that will make you smile"
+optional = false
+python-versions = "*"
+files = [
+    {file = "docopt-0.6.2.tar.gz", hash = "sha256:49b3a825280bd66b3aa83585ef59c4a8c82f2c8a522dbe754a8bc8d08c85c491"},
+]
 
 [[package]]
 name = "exceptiongroup"
@@ -429,6 +476,17 @@ doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "pygments-
 test = ["build[virtualenv] (>=1.0.3)", "filelock (>=3.4.0)", "importlib-metadata", "ini2toml[lite] (>=0.14)", "jaraco.develop (>=7.21)", "jaraco.envs (>=2.2)", "jaraco.path (>=3.2.0)", "jaraco.test", "mypy (==1.11.*)", "packaging (>=23.2)", "pip (>=19.1)", "pyproject-hooks (!=1.1)", "pytest (>=6,!=8.1.*)", "pytest-checkdocs (>=2.4)", "pytest-cov", "pytest-enabler (>=2.2)", "pytest-home (>=0.5)", "pytest-mypy", "pytest-perf", "pytest-ruff (<0.4)", "pytest-ruff (>=0.2.1)", "pytest-ruff (>=0.3.2)", "pytest-subprocess", "pytest-timeout", "pytest-xdist (>=3)", "tomli", "tomli-w (>=1.0.0)", "virtualenv (>=13.0.0)", "wheel"]
 
 [[package]]
+name = "six"
+version = "1.16.0"
+description = "Python 2 and 3 compatibility utilities"
+optional = false
+python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+files = [
+    {file = "six-1.16.0-py2.py3-none-any.whl", hash = "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"},
+    {file = "six-1.16.0.tar.gz", hash = "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926"},
+]
+
+[[package]]
 name = "sqlparse"
 version = "0.5.1"
 description = "A non-validating SQL parser."
@@ -511,4 +569,4 @@ files = [
 [metadata]
 lock-version = "2.0"
 python-versions = ">=3.9"
-content-hash = "5dec008c490f412078b1fafa0c47def9f25ce40d5427e35d76d3fd64187ac693"
+content-hash = "98859e12a55aa5c19a3c0a606bac75b634eb1477f0793e4bff5014fc25acb8a7"

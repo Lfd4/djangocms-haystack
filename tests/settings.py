@@ -15,21 +15,10 @@ HAYSTACK_CONNECTIONS = {
 
 HELPER_SETTINGS = {
     "DEBUG": True,
+    "TEST_RUNNER": "app_helper.pytest_runner.PytestTestRunner",
     "INSTALLED_APPS": [
-        "djangocms_admin_style",
-        "django.contrib.admin",
-        "django.contrib.auth",
-        "django.contrib.contenttypes",
-        "django.contrib.sessions",
-        "django.contrib.messages",
-        "django.contrib.staticfiles",
-        "django.contrib.sites",
         "haystack",
         "djangocms_haystack",
-        "cms",
-        "menus",
-        "sekizai",
-        "treebeard",
     ],
     "MIDDLEWARE": [
         "django.middleware.security.SecurityMiddleware",
@@ -62,11 +51,6 @@ HELPER_SETTINGS = {
             },
         },
     ],
-    "CMS_TEMPLATES": (
-        ("fullwidth.html", "Fullwidth"),
-        ("page.html", "Normal page"),
-        ("test.html", "Normal page2"),
-    ),
     "ALLOWED_HOSTS": ["localhost"],
     "CMS_LANGUAGES": {
         1: [
@@ -79,12 +63,10 @@ HELPER_SETTINGS = {
         ("en", "English"),
     ),
     "LANGUAGE_CODE": "de",
-    # 'TEMPLATE_LOADERS': ('aldryn_search.tests.FakeTemplateLoader',),
     "HAYSTACK_CONNECTIONS": HAYSTACK_CONNECTIONS,
     "CMS_PERMISSION": True,
     "CMS_PLACEHOLDER_CONF": {
         "content": {},
     },
+    "CMS_CONFIRM_VERSION4": True,
 }
-
-SETTINGS = {**HELPER_SETTINGS}
