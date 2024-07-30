@@ -1,6 +1,7 @@
 from typing import Optional
 
 from cms.models import CMSPlugin, Placeholder
+from django.contrib.contenttypes.models import ContentType
 from django.conf import settings
 from django.core.handlers.wsgi import WSGIRequest
 from django.db import models
@@ -92,8 +93,8 @@ class DjangoCMSSearchIndexBase(indexes.SearchIndex):
     ) -> models.QuerySet[Placeholder]:
         content_type = ContentType.objects.get_for_model(instance)
         return Placeholder.objects.filter(
-                object_id=instance.pk, content_type=content_type
-            )
+            object_id=instance.pk, content_type=content_type
+        )
 
     def get_search_data(
         self, instance: models.Model, language: str, request: WSGIRequest
