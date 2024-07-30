@@ -21,9 +21,8 @@ class PageContentIndex(DjangoCMSSearchIndexBase, indexes.Indexable):
     def get_index_queryset(self, language):
         return PageContent.objects.filter(
             Q(redirect__exact="") | Q(redirect__isnull=True),
-            versions__state="published",
             language=language,
-        ).distinct()
+        )
 
     def should_update(self, instance, **kwargs):
         # Instantly update the index on pagecontent changes
