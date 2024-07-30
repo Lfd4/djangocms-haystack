@@ -4,7 +4,7 @@ build-backend = "poetry.core.masonry.api"
 
 [tool.poetry]
 name = "djangocms-haystack"
-version = "0.3.1"
+version = "0.4.0"
 description = "aldryn-search inspired Haystack index for djangoCMS projects"
 authors = ["Filip Weidemann <filip.weidemann@lfda.de>"]
 readme = "README.md"

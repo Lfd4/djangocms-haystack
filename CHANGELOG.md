@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.0](https://github.com/Lfd4/djangocms-haystack/compare/v0.3.1...v0.4.0) (2024-07-30)
+
+
+### Features
+
+* execute tests in ci ([23d54d2](https://github.com/Lfd4/djangocms-haystack/commit/23d54d213d126e69bdcf6721bf17d05f33ac7812))
+
 ## [0.3.1](https://github.com/Lfd4/djangocms-haystack/compare/v0.3.0...v0.3.1) (2024-07-30)
 
 
