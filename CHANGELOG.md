@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.4.1](https://github.com/Lfd4/djangocms-haystack/compare/v0.4.0...v0.4.1) (2024-09-05)
+
+
+### Documentation
+
+* improve readme ([0bb8825](https://github.com/Lfd4/djangocms-haystack/commit/0bb882574a99f9f088e0da9ca0e7668b76073ddc))
+
 ## [0.4.0](https://github.com/Lfd4/djangocms-haystack/compare/v0.3.1...v0.4.0) (2024-07-30)
 
 
