@@ -3,4 +3,5 @@
 .nox
 .pytest_cache
 .ruff-cache
+poetry.lock
 dist/*
