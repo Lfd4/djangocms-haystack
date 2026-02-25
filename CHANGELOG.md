@@ -1,5 +1,12 @@
 # Changelog
 
+## [0.5.0](https://github.com/Lfd4/djangocms-haystack/compare/v0.4.1...v0.5.0) (2026-02-25)
+
+
+### Features
+
+* add support and ci test jobs for cms version 5 ([cdd900b](https://github.com/Lfd4/djangocms-haystack/commit/cdd900b743de27b98d832e2b24dd810bb3869967))
+
 ## [0.4.1](https://github.com/Lfd4/djangocms-haystack/compare/v0.4.0...v0.4.1) (2024-09-05)
 
 
