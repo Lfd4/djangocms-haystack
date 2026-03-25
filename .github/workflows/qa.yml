@@ -15,10 +15,12 @@ jobs:
     strategy:
       matrix:
         python-version: ["3.9", "3.10", "3.11", "3.12", "3.13"]
-        cms-version: ["4.1.2", "5.0.5"]
+        cms-version: ["4.1.10", "5.0.6"]
         exclude:
           - python-version: "3.9"
-            cms-version: "5.0.5"
+            cms-version: "5.0.6"
+          - python-version: "3.13"
+            cms-version: "4.1.10"
     steps:
       - uses: actions/checkout@v4
 
