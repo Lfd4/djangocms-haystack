@@ -1,5 +1,13 @@
 # Changelog
 
+## [0.5.1](https://github.com/Lfd4/djangocms-haystack/compare/v0.5.0...v0.5.1) (2026-03-25)
+
+
+### Bug Fixes
+
+* pin djangocms versions to fix treebeard dependency bug ([0751cfd](https://github.com/Lfd4/djangocms-haystack/commit/0751cfde1cc79a2df7163f51f16821d74db34e3f))
+* unpin cms dependency after fix on their side ([323579b](https://github.com/Lfd4/djangocms-haystack/commit/323579bff93915fa039010b3aacb05e63e677279))
+
 ## [0.5.0](https://github.com/Lfd4/djangocms-haystack/compare/v0.4.1...v0.5.0) (2026-02-25)
 
 
