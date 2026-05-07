@@ -1,5 +1,21 @@
 # Changelog
 
+## [0.6.0](https://github.com/Lfd4/djangocms-haystack/compare/v0.5.1...v0.6.0) (2026-05-07)
+
+
+### Features
+
+* add support and ci test job for djangocms 5.1 ([f7709e0](https://github.com/Lfd4/djangocms-haystack/commit/f7709e08db5dd9dce794fa71a479295174186db5))
+
+
+### Bug Fixes
+
+* another round of poetry fixes ([5152bf2](https://github.com/Lfd4/djangocms-haystack/commit/5152bf2b4b824d511faf975571579d81e3202fc0))
+* toml parsing error ([de0596b](https://github.com/Lfd4/djangocms-haystack/commit/de0596bdda36822da188d5435e98775f6d9998ce))
+* try djangocms version specific python version constrains ([213aa2f](https://github.com/Lfd4/djangocms-haystack/commit/213aa2fe426510e7ac9a8aa2f1a479dfb4c97367))
+* try djangocms version specific python version constrains ([29253d2](https://github.com/Lfd4/djangocms-haystack/commit/29253d2bae8df96883d8310722268699214318e4))
+* use pre-release version in test and adjust upper bound for cms dependency ([5e28534](https://github.com/Lfd4/djangocms-haystack/commit/5e28534071a7d2045a41a00ae1c88a6730719878))
+
 ## [0.5.1](https://github.com/Lfd4/djangocms-haystack/compare/v0.5.0...v0.5.1) (2026-03-25)
 
 
