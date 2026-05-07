@@ -20,7 +20,7 @@ jobs:
           - python-version: "3.9"
             cms-version: "5.0.6"
           - python-version: "3.9"
-            cms-version: "5.1.0"
+            cms-version: "5.1.0a1"
           - python-version: "3.13"
             cms-version: "4.1.10"
           
@@ -35,8 +35,11 @@ jobs:
       - name: Install poetry
         run: pip install poetry
 
-      - name: Pin cms version and install dependencies
-        run: poetry add django-cms==${{ matrix.cms-version }}
+      - name: Install dependencies
+        run: poetry install
+
+      - name: Pin cms version
+        run: poetry run pip install --upgrade django-cms==${{ matrix.cms-version }}
 
       - name: Run nox
         run: poetry run nox
